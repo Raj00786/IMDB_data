@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="imdb">
+    <head>
+        <title>IMDB DATA</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <style>
+            html, body, input, select, textarea
+            {
+                font-size: 1.05em !important;
+            }
+        </style>
+        <script src="src/angular.min.js"></script>
+        <script src="src/angular-route.min.js"></script>
+        <script src="src/angular-resource.min.js"></script>
+        <script src="app.js"></script>
+   </head>
+    <body ng-controller="imdb_data">
+        <div class="container">
+           <div>
+               <p style="color: red">Type movie name and click search button to get data from imdb</p>
+               <input type="text"   ng-model="name" placeholder="type movie data1">
+               <button type="text" name="search" ng-click="search()" type="submit">Search</button> 
+               <h1>{{name}}</h1>
+           </div> 
+            <pre>{{data1 | json}}</pre>
+		</div>
+    </body>
+</html>
